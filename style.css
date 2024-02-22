@@ -1,0 +1,218 @@
+/* Set global styles */
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Main container styles */
+main {
+    position: fixed; /* Fix the position */
+    top: 0; /* Position from the top */
+    left: 0; /* Position from the left */
+    width: 100%; /* Cover the entire viewport */
+    height: 100%; /* Cover the entire viewport */
+    background-image: url('https://res.cloudinary.com/dzynqn10l/image/upload/v1633196203/Msc/pokemon-bg_ig4uv3.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat;
+}
+
+/* Choices container styles */
+#choices {
+    width: 100%;
+    position: absolute; /* Position absolutely */
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Display choices in two columns */
+    grid-gap: 12px; /* Add gap between grid items */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #choices {
+        grid-template-columns: 1fr; /* Display choices in a single column on smaller screens */
+    }
+    #pokemon-image {
+        transform: scale(1); /* Reset scale of Pokémon image on smaller screens */
+    }
+}
+
+/* Pokémon container styles */
+#pokemon-container {
+    position: absolute; /* Position absolutely */
+    top: 49%; /* Position from the top */
+    left: 17%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    height: 355px;
+}
+
+/* Hidden answer element */
+#answer {
+    display: none;
+}
+
+/* Background overlay styles */
+#bg-overlay {
+    color: #fff;
+    position: absolute; /* Position absolutely */
+    background-color: transparent;
+    right: 25px;
+    width: 170px;
+    height: 170px;
+    top: 60px;
+    border-radius: 50%;
+}
+
+/* Text overlay styles */
+#text-overlay {
+    position: absolute; /* Position absolutely */
+    right: 20px;
+    top: 100px;
+    background-color: #ffcb02;
+    border: solid 7px #2c70ae;
+    padding: 20px;
+    min-width: 130px;
+    font-family: 'Bangers', Arial, sans-serif;
+    font-size: 36px;
+    letter-spacing: 1.2px;
+    color: #3ea2fe;
+    text-shadow: 2px 2px #1d366c;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Controls section styles */
+#controls {
+    padding: 20px 40px;
+}
+
+/* Button styles */
+button {
+    background: #fff;
+    border: none;
+    color: #3e7ae7;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 36px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 10px 1px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+button:hover {
+    box-shadow: 0px 4px 10px 4px;
+    background-color: #fff6d1;
+}
+
+button.correct,
+button.incorrect {
+    color: #d9fcd9;
+    box-shadow: none;
+}
+
+button.correct {
+    background: #0dff0d;
+}
+
+button.incorrect {
+    background: #ea2e25;
+}
+
+/* Play button styles */
+#play {
+    position: absolute; /* Position absolutely */
+    bottom: 120px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+}
+
+/* Pokéball styles */
+#pokeball {
+    width: 78px;
+    margin: 144px 0 0 144px;
+    position: absolute; /* Position absolutely */
+    visibility: hidden;
+    animation: wiggle 1.35s infinite;
+}
+
+/* Pokémon image styles */
+#pokemon-image {
+    transform: scale(1.5);
+    filter: brightness(0);
+    transition: filter 0.5s ease-out, opacity 0.5s ease-in-out; /* Add transition for opacity */
+    position: absolute; /* Position absolutely */
+    left: 0; /* Position from the left */
+    opacity: 0; /* Start with opacity 0 */
+}
+
+/* Apply styles when fetching */
+main.fetching #pokeball {
+    visibility: visible;
+}
+
+main.fetching #pokemon-image {
+    visibility: hidden;
+    display: none;
+}
+
+main.fetching #choices {
+    display: none;
+}
+
+/* Apply styles when revealed */
+main.revealed #pokemon-image {
+    filter: none;
+}
+
+main.revealed #answer {
+    display: block;
+}
+
+/* Score box styles */
+#score-box {
+    position: absolute; /* Position absolutely */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    background-color: #ffcb02;
+    padding: 10px 20px;
+    font-family: 'Bangers', Arial, sans-serif;
+    font-size: 24px;
+    color: #3ea2fe;
+    border: solid 7px #2c70ae;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+/* Mute button styles */
+#muteButton {
+    position: absolute; /* Position absolutely */
+    top: 80px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    background-color: #ffcb02;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: #3ea2fe;
+    border: solid 7px #2c70ae;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Speaker icon styles */
+#speakerIcon {
+    font-size: 24px; /* Adjust the size of the speaker icon */
+    color: #ffffff; /* Set the color of the icon */
+}
+
+/* Wiggle animation */
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    80% { transform: rotate(0deg); }
+    85% { transform: rotate(6deg); }
+    95% { transform: rotate(-6deg); }
+    100% { transform: rotate(0deg); }
+}

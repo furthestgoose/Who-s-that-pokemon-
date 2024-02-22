@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Who's That Pokèmon?</title> <!-- Title of the webpage -->
+    <link rel="icon" type="image/x-icon" href="Images/icon.png"> <!-- Favicon for the webpage -->
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- External CSS stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> <!-- Google Fonts stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome stylesheet -->
+</head>
+
+<body>
+  <main class="fetching"> <!-- Main content container with class "fetching" -->
+
+    <div id="pokemon-container"> <!-- Container for the Pokémon images -->
+      <img id="pokeball" src="https://res.cloudinary.com/dzynqn10l/image/upload/v1633196610/Msc/pokeball_zeoqii.webp"> <!-- Image of a Pokéball -->
+      <img id="pokemon-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D"> <!-- Placeholder image for the Pokémon -->
+    </div>
+
+    <div id="answer"> <!-- Container for the answer overlay -->
+      <div id="bg-overlay"></div> <!-- Background overlay -->
+      <div id="text-overlay"></div> <!-- Text overlay -->
+    </div>
+    <div id="score-box"> <!-- Container for displaying the score -->
+        <span id="counter">0/0 Correct</span> <!-- Display of correct answers -->
+    </div>
+
+    <section id="controls"> <!-- Container for the control buttons -->
+        <button id="muteButton"> <!-- Button to mute sound -->
+            <i id="speakerIcon" class="fa fa-volume-off"></i> <!-- Icon for muting sound -->
+        </button>
+      <button id="play">Play</button> <!-- Button to start the game -->
+      <div id="choices"></div> <!-- Container for displaying choices -->
+    </section>
+  </main>
+
+  <script src="Api.js"></script> <!-- External JavaScript file for API -->
+  <script src="index.js"></script> <!-- External JavaScript file for index -->
+</body>
+</html>
