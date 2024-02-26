@@ -1,0 +1,40 @@
+{
+  "name": "whos-that-pokemon",
+  "version": "1.0.0",
+  "author": "Adam <adamby20@gmail.com",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac --win --linux"
+  },
+  "build": {
+    "productName": "who's-that-pokemon",
+    "mac": {
+      "icon": "Images/icon.icns"
+    },
+    "win": {
+      "target": ["nsis"],
+      "icon": "Images/icon.ico"
+    },
+    "linux": {
+      "icon": "Images/icon.png",
+      "target": [
+        "AppImage"
+      ]
+    },
+    "nsis": {
+      "perMachine": false,
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^15.0.0",
+    "electron-builder": "^24.12.0"
+  },
+  "dependencies": {
+    "update-electron-app": "^3.0.0"
+  }
+}
