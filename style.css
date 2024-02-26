@@ -140,7 +140,7 @@ button.incorrect {
 
 /* Pokémon image styles */
 #pokemon-image {
-    transform: scale(1.5);
+    transform: scale(1);
     filter: brightness(0);
     transition: filter 0.5s ease-out, opacity 0.5s ease-in-out; /* Add transition for opacity */
     position: absolute; /* Position absolutely */
