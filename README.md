@@ -17,7 +17,7 @@ Incorrect Guess
 ## Features
 
 - Randomly selects a Pokemon for the user to guess.
-- Provides hints such as the silhouette of the Pokemon and the type.
+- Provides hints such as the silhouette of the Pokemon.
 - Allows users to input their guess and see if they are correct.
 - Fun and nostalgic for fans of the Pokemon franchise!
 

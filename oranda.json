@@ -1,21 +1,21 @@
 {
-    "project": {
-        "name": "Who's that pokemon?",
-        "version": "1.0.0",
-        "repository": "https://github.com/furthestgoose/Who-s-that-pokemon-"
-    },
-    "build": {
-      "path_prefix": "Who-s-that-pokemon-"
-    },
-    "styles": {
-      "theme": "axodark",
-      "favicon": "Images/icon.ico"
-    },
-    "components": {
-      "changelog": true,
-      "artifacts": {
-        "auto": false
-      }
+  "project": {
+      "name": "Who's that pokemon?",
+      "version": "1.0.0",
+      "repository": "https://github.com/furthestgoose/Who-s-that-pokemon-"
+  },
+  "build": {
+    "path_prefix": "Who-s-that-pokemon-"
+  },
+  "styles": {
+    "theme": "axodark",
+    "favicon": "Images/icon.ico"
+  },
+  "components": {
+    "changelog": true,
+    "artifacts": {
+      "auto": false
     }
   }
+}
   
