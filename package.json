@@ -9,7 +9,7 @@
     "build": "electron-builder --mac --win --linux"
   },
   "build": {
-    "productName": "who's-that-pokemon",
+    "productName": "Who's That Pokemon",
     "mac": {
       "icon": "Images/icon.icns"
     },
@@ -19,9 +19,7 @@
     },
     "linux": {
       "icon": "Images/icon.png",
-      "target": [
-        "AppImage"
-      ]
+      "target": ["AppImage"]
     },
     "nsis": {
       "perMachine": false,

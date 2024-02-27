@@ -22,8 +22,9 @@ addAnswerHandler(); // Add event handler for choices
 
 // Function to fetch data for the game
 async function fetchData() {
-    playBtn.removeEventListener('click', fetchData); // Remove event listener from play button
     count++; // Increment attempt count
+    document.getElementById('counter').textContent = correct + "/" + count + " Correct"; // Update counter display
+    playBtn.removeEventListener('click', fetchData); // Remove event listener from play button
     document.getElementById('pokeball').style.visibility = 'hidden'; // Hide Pokéball
     playBtn.innerHTML = "Next"; // Change play button text to "Next"
     resetImage(); // Reset Pokémon image

@@ -1,30 +1,8 @@
-# Who's That Pokémon?
 
-Welcome to **Who's That Pokémon?** This is a simple web-based game where players have to guess the name of a Pokémon based on its silhouette.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Images](#Images)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+Welcome to Who's That Pokemon? This is a fun application built with Electron that allows users to guess the name of a randomly selected Pokemon.
 
-## Introduction
-
-In **Who's That Pokémon?**, players are presented with a silhouette of a Pokémon and a set of multiple-choice options. They have to choose the correct Pokémon name from the choices provided. The game is designed to test players' knowledge of Pokémon characters.
-
-## Features
-
-- Random selection of Pokémon silhouettes for each play session.
-- Interactive gameplay with clickable buttons for selecting the Pokémon name.
-- Score tracking to keep track of the number of correct guesses.
-- Background music and sound effects to enhance the gaming experience.
-- Responsive design to ensure compatibility across various devices.
-
-## Images
-
+## Screenshots
 Start Menu
 ![Screenshot 2024-02-25 at 15 59 15](https://github.com/furthestgoose/Who-s-that-pokemon-/assets/77462614/99437f52-2378-424e-847f-f6fe41498fef)
 First Pokèmon
@@ -36,24 +14,35 @@ Second Pokèmon
 Incorrect Guess
 ![Screenshot 2024-02-25 at 15 59 54](https://github.com/furthestgoose/Who-s-that-pokemon-/assets/77462614/f46dbd68-96dd-4b48-ae2d-227c2be9dca0)
 
-## Installation
+## Features
 
-1. Clone the repository to your local machine:
-[git clone](https://github.com/furthestgoose/Who-s-that-pokemon-/tree/main)
-
-2. Navigate to the project directory:
-```sh
-cd whos-that-pokemon
-```
-3. Open the `index.html` file in your web browser to play the game.
+- Randomly selects a Pokemon for the user to guess.
+- Provides hints such as the silhouette of the Pokemon and the type.
+- Allows users to input their guess and see if they are correct.
+- Fun and nostalgic for fans of the Pokemon franchise!
 
 ## Usage
 
-1. Click the "Play" button to start the game.
-2. Guess the Pokémon name based on its silhouette.
-3. Click on one of the multiple-choice options.
-4. If correct, the Pokémon's name will be revealed, and your score will increase.
-5. Click "Next" to play again with a new Pokémon silhouette.
+Once you have downloaded the appropriate binary for your operating system, simply run the executable file to start the application. Then, start guessing the Pokemon and have fun!
+
+## Download
+
+You can download the Program from the links below:
+- [Windows x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.That.Pokemon.exe).
+- [MacOS](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.that.Pokemon.Mac.dmg).
+- [Linux x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.That.Pokemon.AppImage).
+
+## Development
+
+To run the application locally for development purposes, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Install the necessary dependencies using `npm install`.
+3. Start the application using `npm start`.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## Credits
 
@@ -62,6 +51,7 @@ This project utilizes the following resources:
 - Pokémon data fetched from [PokéAPI](https://pokeapi.co/).
 - Pokémon sprites from [PokeAPI/sprites](https://github.com/PokeAPI/sprites).
 - Background music and sound effects from [Pixabay](https://pixabay.com/).
+- Release website built using [Oranda](https://opensource.axo.dev/oranda/)
 
 ## License
 
