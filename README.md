@@ -29,7 +29,7 @@ Once you have downloaded the appropriate binary for your operating system, simpl
 
 You can download the Program from the links below (windows may not be working):
 - [Windows x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.1/win-unpacked.zip).
-- [MacOS](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.that.Pokemon.Mac.dmg).
+- [MacOS](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.1/Who.s.That.Pokemon-1.0.0-arm64.dmg).
 - [Linux x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.That.Pokemon.AppImage).
 
 ## Development
