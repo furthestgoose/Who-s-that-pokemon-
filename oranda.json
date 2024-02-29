@@ -1,6 +1,6 @@
 {
   "project": {
-      "name": "Who's that pokemon?",
+      "name": "Who's that Pokemon?",
       "version": "1.0.0",
       "repository": "https://github.com/furthestgoose/Who-s-that-pokemon-"
   },
@@ -12,9 +12,8 @@
     "favicon": "Images/Pokemon Icon.ico"
   },
   "components": {
-    "changelog": true,
-    "artifacts": {
-      "auto": false
+    "changelog":{
+      "rss_feed": false
     }
   }
 }

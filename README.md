@@ -2,6 +2,17 @@
 
 Welcome to Who's That Pokemon? This is a fun application built with Electron that allows users to guess the name of a randomly selected Pokemon.
 
+## Download
+
+You can download the Program from the links below:
+- [Windows x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.2/Who.s.That.Pokemon.1.0.0.win.zip).
+- [MacOS](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.that.Pokemon.Mac.dmg).<br>
+To run the program on mac you must run this command after running the .dmg file due to me not having an apple developer key:
+```bash
+xattr -c /Applications/Who\'s\ That\ Pokemon.app
+```
+- [Linux x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.That.Pokemon.AppImage).
+
 ## Screenshots
 Start Menu
 ![Screenshot 2024-02-25 at 15 59 15](https://github.com/furthestgoose/Who-s-that-pokemon-/assets/77462614/99437f52-2378-424e-847f-f6fe41498fef)
@@ -24,18 +35,6 @@ Incorrect Guess
 ## Usage
 
 Once you have downloaded the appropriate binary for your operating system, simply run the executable file to start the application. Then, start guessing the Pokemon and have fun!
-
-## Download
-
-You can download the Program from the links below:
-- [Windows x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.2/Who.s.That.Pokemon.1.0.0.win.zip).
-- [MacOS](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.that.Pokemon.Mac.dmg).
-To run the program on mac you must run this command after running the .dmg file due to me not having an apple developer key:
-```bash
-xattr -c /Applications/Who\'s\ That\ Pokemon.app
-
-```
-- [Linux x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.That.Pokemon.AppImage).
 
 ## Development
 
