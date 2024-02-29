@@ -5,7 +5,7 @@ platform:
 
 build_script:
   - npm install
-  - npm run build
+  - npx electron-builder -w --x64
 
 artifacts:
   - path: dist\**\*
