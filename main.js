@@ -1,27 +1,15 @@
-const { app,autoUpdater, BrowserWindow,dialog } = require('electron');
+const { app, autoUpdater, BrowserWindow, dialog } = require('electron');
 
-const updateServerUrl = 'https://github.com/furthestgoose/Who-s-that-pokemon-/releases'
-// set update server url
+const updateServerUrl = 'https://github.com/furthestgoose/Who-s-that-pokemon-/releases';
 
-autoUpdater.setFeedURL({
-  // sets url as the auto update server
-    url: updateServerUrl
-});
+autoUpdater.setFeedURL({ url: updateServerUrl });
 
-// Check for updates on app launch
 app.on('ready', () => {
   createWindow();
   autoUpdater.checkForUpdates();
 });
 
-setInterval(() => {
-    autoUpdater.checkForUpdates();
-    // checks for updates every hour
-}, 3600000);
-
 autoUpdater.on('update-available', () => {
-  /* if an update is available a dialog box will be displayed informing the user of this
-   and will give them the option to download it now or later*/
   dialog.showMessageBox({
     type: 'info',
     title: 'Update Available',
@@ -32,13 +20,11 @@ autoUpdater.on('update-available', () => {
       autoUpdater.downloadUpdate();
     }
   }).catch((error) => {
-    // error handling
     console.error('Error showing update available dialog:', error);
   });
 });
 
 autoUpdater.on('update-downloaded', () => {
-  // once the update is downloaded the user is given the option to install it now or later
   dialog.showMessageBox({
     type: 'info',
     title: 'Update Ready',
@@ -46,21 +32,21 @@ autoUpdater.on('update-downloaded', () => {
     buttons: ['Install', 'Later']
   }).then((response) => {
     if (response.response === 0) {
-      // if the user clicks installl the program exits and the update is installed
       autoUpdater.quitAndInstall();
     }
   }).catch((error) => {
-    // error handling
     console.error('Error showing update ready dialog:', error);
   });
 });
 
-
 autoUpdater.on('error', (error) => {
-  // autoUpdater error handling
+  if (error.message.includes('No updates available')) {
+    // This is not an error, so you can simply log a message or do nothing
+    console.log('No updates available.');
+  } else {
     console.error('Update error:', error.message);
-    dialog.showErrorBox('Update Error', 'An error occurred while checking for updates. Please try again later.');
-  });
+  }
+});
 
 let mainWindow;
 
@@ -75,20 +61,18 @@ function createWindow() {
 
   mainWindow.loadFile('Menu.html');
 
-  mainWindow.on('closed', function () {
+  mainWindow.on('closed', () => {
     mainWindow = null;
   });
 }
 
-app.on('ready', createWindow);
-
-app.on('window-all-closed', function () {
+app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
 });
 
-app.on('activate', function () {
+app.on('activate', () => {
   if (mainWindow === null) {
     createWindow();
   }
