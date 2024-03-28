@@ -5,13 +5,13 @@ Welcome to Who's That Pokemon? This is a fun application built with Electron tha
 ## Download
 
 You can download the Program from the links below:
-- [Windows x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.2/Who.s.That.Pokemon.1.0.0.win.zip).
-- [MacOS](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.that.Pokemon.Mac.dmg).<br>
+- [Windows x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.1.0/Who.s.That.Pokemon.1.1.0.win.zip).
+- [MacOS](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.1.0/Who.s.That.Pokemon-1.1.0-arm64.dmg).<br>
 To run the program on mac you must run this command after running the .dmg file due to me not having an apple developer key:
 ```bash
 xattr -c /Applications/Who\'s\ That\ Pokemon.app
 ```
-- [Linux x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.0.0/Who.s.That.Pokemon.AppImage).
+- [Linux x64](https://github.com/furthestgoose/Who-s-that-pokemon-/releases/download/v1.1.0/Who.s.That.Pokemon-1.1.0.AppImage).
 
 ## Screenshots
 Start Menu
