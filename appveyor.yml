@@ -3,14 +3,11 @@ image: Visual Studio 2019
 platform:
   - x64
 
-build:
-  mode: Script  # Switch to Script mode
-  script:
-    - npm install
-    - npx electron-builder -w --x64
+build_script:
+  - npm install
+  - npx electron-builder -w --x64
 
 artifacts:
   - path: dist\**\*
     name: MyApp
-
 
