@@ -34,6 +34,9 @@ async function fetchData() {
     }
     displayChoices(); // Display choices
 }
+function exit() {
+    window.location.href = "Menu.html"; // Redirect to index.html
+}
 
 // Function to toggle mute status
 function toggleMute() {

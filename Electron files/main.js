@@ -8,6 +8,12 @@ autoUpdater.setFeedURL({
     url: updateServerUrl
 });
 
+// Check for updates on app launch
+app.on('ready', () => {
+  createWindow();
+  autoUpdater.checkForUpdates();
+});
+
 setInterval(() => {
     autoUpdater.checkForUpdates();
     // checks for updates every hour
@@ -67,7 +73,7 @@ function createWindow() {
     }
   });
 
-  mainWindow.loadFile('Index.html');
+  mainWindow.loadFile('Menu.html');
 
   mainWindow.on('closed', function () {
     mainWindow = null;

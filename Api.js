@@ -1,3 +1,8 @@
+
+function selectGeneration(generation) {
+  window.location.href = "Index.html"; // Redirect to index.html
+  localStorage.setItem('selectedGeneration', generation);
+}
 // Function to fetch data for the Pokémon game
 window.getPokeData = async function() {
     // Get a list of Pokémon from the API
@@ -22,9 +27,38 @@ window.getPokeData = async function() {
   };
   
 // Function to fetch Pokémon data from the PokeAPI
-async function getPokemon() {
-    // Fetch Pokémon data from the API
-    const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1025');
+async function getPokemon(limit) {
+  const generation = localStorage.getItem('selectedGeneration');
+  switch (generation){
+    case 'Generation 1':
+          res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151'); // Limit for Generation 1
+          break;
+    case 'Generation 2':
+          res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=251'); // Limit for Generation 2
+          break;
+    case 'Generation 3':
+          res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=386')
+          break;
+    case 'Generation 4':
+          res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=493');
+          break;
+    case 'Generation 5':
+          res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=649')
+          break;
+    case 'Generation 6':
+          res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=721')
+          break;
+    case 'Generation 7':
+          res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=809')
+          break;
+    case 'Generation 8':
+          res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=905')
+          break;
+    case 'Generation 9':
+          res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1025')
+          break;
+
+  }
     // Convert the response to JSON
     const pokemon = await res.json();
     
@@ -51,13 +85,20 @@ function get4Pokemon(randomPokemon) {
     return randomPokemon.splice(0, 4);
 }
 
-// Function to get the image URL for a Pokémon
 function getPokemonImage({ url }) {
-    // Extract the Pokémon number from the URL
-    const number = getNumber(url);
-    // Return the URL of the Pokémon image
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${number}.png`;
-};
+  const selectedStyle = localStorage.getItem('selectedStyle');
+  // Extract the Pokémon number from the URL
+  const number = getNumber(url);
+  console.log(selectedStyle);
+  switch (selectedStyle) {
+    case 'drawn':
+      // Construct URL for drawn style
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${number}.png`;
+    case '3D':
+      // Construct URL for 3D style
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${number}.png`;
+  }
+}
 
 // Function to extract the Pokémon number from the URL
 function getNumber(url) {

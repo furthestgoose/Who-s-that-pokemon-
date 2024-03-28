@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <style>
+        body{
+            background-image: url('Images/pokedex.png');
+            background-size: cover;
+        }
+        .container {
+            position: relative; /* Added for positioning the dropdown */
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            display: block; /* Ensures buttons are displayed as block elements */
+            background: #fff;
+            border: none;
+            color: #3e7ae7;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 10px 1px;
+            transition: all .2s ease-out;
+        }
+        button:hover {
+            box-shadow: 0px 4px 10px 4px;
+            background-color: #fff6d1;
+        }
+        .title {
+            background-color: #ffcb02;
+            border: solid 7px #2c70ae;
+            padding: 20px;
+            min-width: 130px;
+            font-family: 'Bangers', Arial, sans-serif;
+            font-size: 36px;
+            letter-spacing: 1.2px;
+            color: #3ea2fe;
+            border-radius: 20px;
+            text-align: center;
+        }
+        #style-dropdown {
+            padding: 10px;
+            font-size: 16px;
+            border: 7px solid #2c70ae;
+            border-radius: 20px;
+            background-color: #ffcb02;
+            margin-bottom: 20px;
+        }
+        .dropdown-label {
+            font-family: 'Bangers', Arial, sans-serif;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            color: #ffcb02;
+            text-align: center;
+        }
+        /* Added style for each dropdown option */
+        #style-dropdown option {
+            padding: 5px 10px;
+        }
+        .option-image {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .top-buttons {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Main Menu</h1>
+    <label for="style-dropdown" class="dropdown-label">Select Pokemon Style:</label>
+    <select id="style-dropdown">
+        <option value="drawn">Illustrated</option>
+        <option value="3D">3D</option>
+    </select>
+    <div>
+        <button class="button" onclick="selectGeneration('Generation 1')">Generation 1</button>
+        <button class="button" onclick="selectGeneration('Generation 2')">Generation 2</button>
+        <button class="button" onclick="selectGeneration('Generation 3')">Generation 3</button>
+        <button class="button" onclick="selectGeneration('Generation 4')">Generation 4</button>
+        <button class="button" onclick="selectGeneration('Generation 5')">Generation 5</button>
+        <button class="button" onclick="selectGeneration('Generation 6')">Generation 6</button>
+        <button class="button" onclick="selectGeneration('Generation 7')">Generation 7</button>
+        <button class="button" onclick="selectGeneration('Generation 8')">Generation 8</button>
+        <button class="button" onclick="selectGeneration('Generation 9')">Generation 9</button>
+</div>
+<script src="Api.js"></script> <!-- External JavaScript file for API -->
+<script>
+    var e = document.getElementById("style-dropdown");
+    function onChange() {
+        var selectedOption = e.value;
+        localStorage.setItem('selectedStyle', selectedOption);
+        console.log(selectedOption)
+    }
+    e.onchange = onChange;
+    onChange();
+</script>
+</body>
+</html>
+
+
+
+
+

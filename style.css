@@ -128,6 +128,12 @@ button.incorrect {
     bottom: 120px; /* Distance from the bottom */
     left: 20px; /* Distance from the left */
 }
+#exit{
+    position: absolute; /* Position absolutely */
+    bottom: 120px; /* Distance from the bottom */
+    left: 140px; /* Distance from the left */
+
+}
 
 /* Pokéball styles */
 #pokeball {
@@ -215,4 +221,27 @@ main.revealed #answer {
     85% { transform: rotate(6deg); }
     95% { transform: rotate(-6deg); }
     100% { transform: rotate(0deg); }
+}
+.container {
+    position: relative; /* Added for positioning the dropdown */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#style-dropdown {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #fff;
+}
+/* Added style for each dropdown option */
+#style-dropdown option {
+    padding: 5px 10px;
 }
