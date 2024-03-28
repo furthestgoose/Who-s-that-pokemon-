@@ -4,6 +4,7 @@ platform:
   - x64
 
 build:
+  mode: Script  # Switch to Script mode
   script:
     - npm install
     - npx electron-builder -w --x64
